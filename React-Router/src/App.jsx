@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/home";
 import Red from "./components/Red";
 import Blue from "./components/Blue";
 
@@ -17,7 +18,7 @@ function App() {
           </div>
         <div id="main-section">
           <Routes>
-            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/" element={Home()} />
             <Route path="/Red" element={Red()} />
             <Route path="/Blue" element={Blue()} />
           </Routes>
