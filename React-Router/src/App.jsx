@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -8,7 +8,11 @@ function App() {
   return (
     <>
       <div id="container">
-        <div id="navbar">{/* navigation here */}</div>
+        <div id="navbar">
+        <Link to="/" >Home</Link>
+        <Link to="/Blue">Blue</Link>
+        <Link to="/Red">Red</Link>
+          </div>
         <div id="main-section">
           <Routes>
             <Route path="/" element={<h1>home</h1>} />
