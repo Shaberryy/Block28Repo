@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+import Red from "./components/Red";
+import Blue from "./components/Blue";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,10 +17,9 @@ function App() {
           </div>
         <div id="main-section">
           <Routes>
-            <Route path="/" element={<h1>home</h1>} />
-
-            <Route path="/Blue" element={<h1>Blue</h1>} />
-            <Route path="/Red" element={<h1>Red</h1>} />
+            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/Red" element={Red()} />
+            <Route path="/Blue" element={Blue()} />
           </Routes>
         </div>
       </div>
